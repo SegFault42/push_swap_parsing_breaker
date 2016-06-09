@@ -193,6 +193,15 @@ else
 	printf "\033[32m.\033[0m"
 fi
 
+../push_swap 18446744073709551616 &> .tmp_result
+DIFF=$(diff .tmp_result ./files_comp/error)
+if [ "$DIFF" != "" ]
+then
+	printf "\033[31m!\033[0m"
+else
+	printf "\033[32m.\033[0m"
+fi
+
 printf "\n"
 ################################################################################
 printf "_____________________________________________________________________\n"
@@ -259,7 +268,16 @@ else
 	printf "\033[32m.\033[0m"
 fi
 
-../push_swap 9 6 4 8 5- 654-5454 51 &> .tmp_result
+../push_swap 9 6 4 8 5 654-5454 51 &> .tmp_result
+diff=$(diff .tmp_result ./files_comp/error)
+if [ "$diff" != "" ]
+then
+	printf "\033[31m!\033[0m"
+else
+	printf "\033[32m.\033[0m"
+fi
+
+../push_swap 9 6 4 8 5 -6545454- 51 &> .tmp_result
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
