@@ -427,8 +427,37 @@ else
 fi
 printf "\n"
 ################################################################################
-printf "+---------------+\n"
+printf "_____________________________________________________________________\n"
 ################################################################################
+printf "\033[38;5;6mTest du dernier caractere :\033[0m\n"
+
+../push_swap 1 2 3 4 5 6 7 8 9 -1 -2 -3 -4 -5 -6 -7 -8 -9 &> .tmp_result
+cat ./.tmp_result | sed 's/.*\(.\)$/\1/' > ./.tmp_last_char
+diff=$(diff ./.tmp_last_char ./files_comp/space)
+if [ "$diff" == "" ]
+then
+	printf "\033[31m!\033[0m"
+	TEST_KO=$((TEST_KO + 1))
+else
+	printf "\033[32m.\033[0m"
+	TEST_OK=$((TEST_OK + 1))
+fi
+
+../push_swap 2 1 &> .tmp_result
+cat ./.tmp_result | sed 's/.*\(.\)$/\1/' > ./.tmp_last_char
+diff=$(diff ./.tmp_last_char ./files_comp/space)
+if [ "$diff" == "" ]
+then
+	printf "\033[31m!\033[0m"
+	TEST_KO=$((TEST_KO + 1))
+else
+	printf "\033[32m.\033[0m"
+	TEST_OK=$((TEST_OK + 1))
+fi
+
+printf "\n"
+################################################################################
+printf "+---------------+\n"
 
 TEST_MAX=$(($TEST_OK + $TEST_KO))
 
