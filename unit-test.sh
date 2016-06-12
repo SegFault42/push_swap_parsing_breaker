@@ -231,7 +231,18 @@ else
 	TEST_OK=$((TEST_OK + 1))
 fi
 
-../push_swap 18446744073709551616 &> .tmp_result
+../push_swap 9 6 4 8 5 6545454 51 -3147483649 &> .tmp_result
+DIFF=$(diff .tmp_result ./files_comp/error)
+if [ "$DIFF" != "" ]
+then
+	printf "\033[31m!\033[0m"
+	TEST_KO=$((TEST_KO + 1))
+else
+	printf "\033[32m.\033[0m"
+	TEST_OK=$((TEST_OK + 1))
+fi
+
+../push_swap 1 -5 18446744073709551616 &> .tmp_result
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
