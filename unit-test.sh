@@ -13,10 +13,10 @@ DIFF=$(diff .tmp_result ./files_comp/blank)
 DIFF2=$(diff .tmp_result ./files_comp/new_line)
 if [ "$DIFF" == "" ] || [ "$DIFF2" == "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 ../push_swap -100 -90 -80 0 1 2 3 4 5 6 7 8 9 &> .tmp_result
@@ -24,10 +24,10 @@ DIFF=$(diff .tmp_result ./files_comp/blank)
 DIFF2=$(diff .tmp_result ./files_comp/new_line)
 if [ "$DIFF" == "" ] || [ "$DIFF2" == "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 
@@ -41,10 +41,10 @@ printf "\033[38;5;6mTest sans arguments\033[0m\n"
 DIFF=$(diff .tmp_result ./files_comp/blank)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -52,10 +52,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/blank)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -69,10 +69,10 @@ printf "\033[38;5;6mTest avec des doublons :\033[0m\n"
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -80,10 +80,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -91,10 +91,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -108,10 +108,10 @@ printf "\033[38;5;6mTest avec des caracteres non digit (0123456789) :\033[0m\n"
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -119,10 +119,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -130,10 +130,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -141,10 +141,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -152,10 +152,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -163,10 +163,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -174,10 +174,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -185,10 +185,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -196,10 +196,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -213,10 +213,10 @@ printf "\033[38;5;6mTest avec un parametre qui est > ou < a la taille d'un int:\
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -224,10 +224,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -235,10 +235,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -246,10 +246,10 @@ fi
 DIFF=$(diff .tmp_result ./files_comp/error)
 if [ "$DIFF" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -263,10 +263,10 @@ printf "\033[38;5;6mTest avec un parametre a la limite de la taille d'un int (21
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 
@@ -274,10 +274,10 @@ fi
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 
@@ -285,10 +285,10 @@ fi
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 
@@ -302,10 +302,10 @@ printf "\033[38;5;6mTest avec le signe '-' derriere un argument (./push_swap 6 5
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -313,10 +313,10 @@ fi
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -324,10 +324,10 @@ fi
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -335,10 +335,10 @@ fi
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -346,10 +346,10 @@ fi
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -363,10 +363,10 @@ printf "\033[38;5;6mTest avec plusieurs espaces entres les arguments :\033[0m\n"
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 
@@ -374,10 +374,10 @@ fi
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 
@@ -385,10 +385,10 @@ fi
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 
@@ -402,10 +402,10 @@ printf "\033[38;5;6mTest avec chaque arguments entre \"\" :\033[0m\n"
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 
@@ -413,10 +413,10 @@ fi
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 
@@ -430,10 +430,10 @@ printf "\033[38;5;6mTest avec des doublons mais signe inverser :\033[0m\n"
 diff=$(diff .tmp_result ./files_comp/error)
 if [ "$diff" != "" ]
 then
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 else
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 fi
 printf "\n"
@@ -447,10 +447,10 @@ cat ./.tmp_result | sed 's/.*\(.\)$/\1/' > ./.tmp_last_char
 diff=$(diff ./.tmp_last_char ./files_comp/space)
 if [ "$diff" == "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
@@ -459,10 +459,10 @@ cat ./.tmp_result | sed 's/.*\(.\)$/\1/' > ./.tmp_last_char
 diff=$(diff ./.tmp_last_char ./files_comp/space)
 if [ "$diff" == "" ]
 then
-	printf "\033[31m!\033[0m"
+	printf "\033[31m❌ \033[0m"
 	TEST_KO=$((TEST_KO + 1))
 else
-	printf "\033[32m.\033[0m"
+	printf "\033[32m✅ \033[0m"
 	TEST_OK=$((TEST_OK + 1))
 fi
 
